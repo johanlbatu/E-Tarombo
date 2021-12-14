@@ -20,7 +20,7 @@ class Patambor_lautSeeder extends Seeder
 
         DB::table('patambor_lauts')->insert([
             'nomor' => '1',
-            'nama' => 'Op Tinggi',
+            'nama' => 'Op.Tinggi',
             'deskripsi' =>'',
             'created_at' => $createdDate,
             'updated_at' => $createdDate

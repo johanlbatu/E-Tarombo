@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\GenerasiController;
 use App\Http\Controllers\PatamborLautController;
+
+use App\Http\Controllers\TuanMarsantisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +22,6 @@ Route::get('/', function () {
 });
 
 Route::get('/patambor-laut',[PatamborLautController::class,'index'])->name('patambor-laut');
+Route::get('/tuan-marsanti',[TuanMarsantisController::class,'index'])->name('tuan-marsanti');
+Route::get('/generasi',[GenerasiController::class,'index'])->name('generasi');
 
