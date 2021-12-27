@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePatamborLautsTable extends Migration
+class CreateGenerasisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePatamborLautsTable extends Migration
      */
     public function up()
     {
-        Schema::create('patambor_lauts', function (Blueprint $table) {
+        Schema::create('generasis', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('nomor');
             $table->string('nama');
-            $table->text('deskripsi')->nullable();
+            $table->text('domisili');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreatePatamborLautsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('patambor_lauts');
+        Schema::dropIfExists('generasis');
     }
 }

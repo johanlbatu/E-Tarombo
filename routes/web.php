@@ -3,7 +3,7 @@
 use App\Http\Controllers\GenerasiController;
 use App\Http\Controllers\PatamborLautController;
 
-use App\Http\Controllers\TuanMarsantisController;
+use App\Http\Controllers\TuanMarsantiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +22,14 @@ Route::get('/', function () {
 });
 
 Route::get('/patambor-laut',[PatamborLautController::class,'index'])->name('patambor-laut');
-Route::get('/tuan-marsanti',[TuanMarsantisController::class,'index'])->name('tuan-marsanti');
+Route::get('/tambahpl',[PatamborLautController::class,'create'])->name('tambahpl');
+Route::post('/insertpl',[PatamborLautController::class,'insert'])->name('insertpl');
+
+Route::get('/tuan-marsanti',[TuanMarsantiController::class,'index'])->name('tuan-marsanti');
+Route::get('/createtm',[TuanMarsantiController::class,'create'])->name('createtm');
+Route::post('/inserttm',[TuanMarsantiController::class,'insert'])->name('inserttm');
+
 Route::get('/generasi',[GenerasiController::class,'index'])->name('generasi');
+Route::get('/creategn',[GenerasiController::class,'create'])->name('creategn');
+Route::post('/insertgn',[GenerasiController::class,'insert'])->name('insertgn');
 

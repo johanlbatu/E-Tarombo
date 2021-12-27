@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Tuan_Marsanti;
-use App\Models\Tuan_marsantis;
+use App\Models\Tuan_marsanti;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

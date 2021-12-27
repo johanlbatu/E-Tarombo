@@ -14,15 +14,22 @@
 <h1 class="text-center mb-4">Patambor Laut</h1>
 
 <div class="container">
-    <button type="button" class="btn btn-success">Tambah +</button>
+    <a href="/tambahpl" type="button" class="btn btn-success mb-3">Tambah +</a>
     <div class="row">
+        @if($message = Session::get('success'))
+            <div class="alert alert-success" role="alert">
+                {{$message}}
+            </div>
+        @endif
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">Nomor</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Deskripsi</th>
+                <th scope="col">Dibuat</th>
                 <th scope="col">Action</th>
+
             </tr>
             </thead>
             <tbody>
@@ -31,6 +38,7 @@
                 <th scope="row">{{$row->nomor}}</th>
                 <td>{{$row->nama}}</td>
                 <td>{{$row->deskripsi}}</td>
+                <td>{{$row->created_at}}</td>
                 <td>
                     <button type="button" class="btn btn-danger">Hapus</button>
                     <button type="button" class="btn btn-info">Edit</button>
